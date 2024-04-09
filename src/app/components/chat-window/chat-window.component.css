@@ -1,0 +1,9 @@
+.title-font {
+  font-family: 'Helios';
+  font-size: 28px;
+  letter-spacing: 3px; 
+}
+
+svg.logo path {
+  fill: #81C784;
+}
