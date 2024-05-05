@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class ChatService {
-  private backendUrl = 'http://localhost:3000/chat';
+  private backendUrl = 'http://localhost:3200/chat';
 
   constructor(private http: HttpClient) { }
 

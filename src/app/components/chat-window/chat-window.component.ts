@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ChatService } from 'src/app/services/chat.service';
 import { SpeechRecognitionService } from 'src/app/services/speech-recognition.service';
@@ -86,5 +86,16 @@ export class ChatWindowComponent {
 
   changeAudio(): void {
     this.audio = !this.audio;
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.ctrlKey && event.key === 'm') {
+      this.ejecutarAccion();
+    }
+  }
+
+  ejecutarAccion() {
+    this.triggerRecording();
   }
 }
